@@ -1,0 +1,8 @@
+### redis sentinel/standalone config
+redis:
+  enabled: false
+
+
+### redis-cluster config
+redis-cluster:
+  enabled: true

@@ -1,0 +1,15 @@
+apiVersion: v2
+name: redis
+description: A helm chart for installing redis or redis cluster 
+type: application
+version: 0.1.0
+appVersion: 7.2.3
+dependencies:
+  - name: redis-cluster
+    version: 9.1.4
+    repository: file://charts/redis-cluster
+    condition: redis-cluster.enabled
+  - name: redis
+    version: 18.6.2
+    repository: file://charts/redis
+    condition: redis.enabled
